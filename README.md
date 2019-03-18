@@ -1,2 +1,2 @@
 # Snakes-Game
-An Java Applet Application 
+A Java Applet Application 
