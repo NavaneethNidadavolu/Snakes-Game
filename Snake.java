@@ -263,16 +263,19 @@ public class Snake extends Applet implements KeyListener,Runnable
 
 	public void draw_food(Graphics g)
 	{
-		g.setColor(Color.ORANGE);
+		g.setColor(Color.RED);
 		g.fillOval(food_x, food_y, 8,8);
 	}
 
 	public void paint(Graphics g)
 	{
 		g.drawImage(I,0,0,this);
-		this.draw_head(g);
-		this.draw_snake(g);
-		this.draw_food(g);
+		if(!(gameover))
+		{
+			this.draw_head(g);
+			this.draw_snake(g);
+			this.draw_food(g);
+		}
 		this.move_snake();		
 
 		if(snake_x[0]==food_x && snake_y[0]==food_y)
